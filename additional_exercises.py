@@ -14,4 +14,12 @@ def wordle():
         if len(word) == 5 and 'e' in word and uses_any(word) and not word[4] == 'e' and not word[2] == 'e':
             print(word)
 
-wordle()
+# wordle()
+
+def valuecounts(word):
+    counts = {}
+    for letter in word:
+        counts[letter] = counts.get(letter, 0) + 1
+    return counts
+
+# print(valuecounts('brontosaaurus'))
